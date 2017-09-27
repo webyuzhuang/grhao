@@ -1,0 +1,15 @@
+/*首页menu*/
+.topdh_scroll {
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	height: 36px;
+}
+*html .topdh_scroll {
+	position: absolute;
+left:expression(eval(document.documentElement.scrollLeft+0));
+top:expression(eval(document.documentElement.scrollTop＋0))
+}

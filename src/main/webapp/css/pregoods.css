@@ -1,0 +1,389 @@
+/**预订结束*/
+.product_page .entry_content .block_cart a.now_pre_gray{
+	float: left;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_Reservations1.png) no-repeat;
+}
+/**预定开始*/
+.product_page .entry_content .block_cart a.now_pre{
+	float: left;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_Reservations.png) no-repeat;
+}
+.product_page .entry_content .block_cart a.now_pre:hover,
+.product_page .entry_content .block_cart a.now_pre.click,
+.product_page .entry_content .block_cart a.now_pre:focus{
+	background:url(../img/product_page_Now_Reservations2.png) no-repeat;
+}
+/**尾款支付结束*/
+.product_page .entry_content .block_cart a.now_pre_retainage_gray{
+	float: left;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_Payment.png) no-repeat;
+}
+/**尾款支付开始*/
+.product_page .entry_content .block_cart a.now_pre_retainage{
+	float: left;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_Payment1.png) no-repeat;
+}
+.product_page .entry_content .block_cart a.now_pre_retainage:hover,
+.product_page .entry_content .block_cart a.now_pre_retainage.click,
+.product_page .entry_content .block_cart a.now_pre_retainage:focus{
+	background:url(../img/product_page_Now_Payment2.png) no-repeat;
+}
+/**活动结束*/
+.product_page .entry_content .block_cart a.now_pre_mh2{
+	float: left;
+	margin-left:5px;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_end.png) no-repeat;
+}
+/**即将开始*/
+.product_page .entry_content .block_cart a.now_pre_mh2_will{
+	float: left;
+	margin-left:5px;
+	margin-right:3px;
+	position: relative;
+	width:154px;
+	height:36px;
+	background:url(../img/product_page_Now_begin.png) no-repeat;
+}
+/**以下是预定列表样式.......开始**/
+
+/** 导航 特推预定商品 **/
+ul.checkout_list2 li .list_header .number_pre{
+	float: left;
+	padding: 10px 20px 0px 0px;
+	margin-top: 2px;
+	color: #444;
+	width: 30px;
+	height: 32px;
+	font: bold 13px/39px Arial,"microsoft yahei",sans-serif;
+	background-image: url(../img/icon_Apple.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+/** 正在进行中的订金样式*/
+ul.checkout_list2 li.active .list_body form.right_cont .red_gou .price_now_pre_ding{
+	float:left;
+	font:18px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	width:40px;
+	padding:30px 10px 0 60px;
+}
+/**正在进行中的订金金额样式*/
+ul.checkout_list2 li.active .list_body form.right_cont .red_gou .price_now_pre_dingjin{
+	float:left;
+	font:36px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	width:100px;
+	padding:10px 0 0 0;
+}
+/**正在进行中的预订价样式*/
+ul.checkout_list2 li.active .list_body form.right_cont .red_gou .price_old .zhekou_pre2{
+	font: normal 20px/18px  Arial,"microsoft yahei",sans-serif;
+	color: #FFD700;
+}
+/**活动结束的订金样式*/
+ul.checkout_list2 li.active2 .list_body form.right_cont .gray_gou .price_now_ding{
+	float:left;
+	font:18px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	width:40px;
+	padding:30px 10px 0 60px;
+}
+/**活动结束的订金金额样式*/
+ul.checkout_list2 li.active2 .list_body form.right_cont .gray_gou .price_now_pre_dingjin{
+	float:left;
+	font:36px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	width:100px;
+	padding:10px 0 0 0;
+}
+/**下期预告的当前价格样式*/
+.related ul.list_product .price_now span.price_old_pre{
+	float:left;
+	font:18px Arial,"microsoft yahei",sans-serif;
+	color:#FF4500;
+	width:100px;
+}
+/**下期预告的正常价格样式*/
+.related ul.list_product .price_now span.price_old_pre1{
+	font: 14px/24px  Arial,"microsoft yahei",sans-serif;
+	color:#ee8e1d;
+	width:100px;
+	text-decoration:line-through;
+	padding:-10px 0px;
+}
+/**下期预告的订金样式*/
+.related ul.list_product .price_now span.price_old_pre2{
+	float:left;
+	font:14px Arial,"microsoft yahei",sans-serif;
+	color:#FF4500;
+	width:200px;
+}
+.product2 h3.title3{
+	height: 54px;
+	padding: 0px 8px 0 0px;
+	text-indent:48px;
+	line-height:24px!important;
+	background:url(../img/pre_icon.png) no-repeat;
+	margin: 0px 0 0 8px;
+	font:13px/18px Arial,"microsoft yahei",sans-serif;
+	color: #333;
+}
+ul.checkout_list2 li.active .list_body form.right_cont .red_gou .price_old_pre_ding{
+	float:left;
+	font:16px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	margin:5px 0px 0 30px;
+	padding:10px 0 0 0;
+	border-right:dotted 1px #e0e0e0;
+	
+}
+
+ul.checkout_list2 li.active2 .list_body form.right_cont .gray_gou .price_now_ding{
+	float:left;
+	font:18px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	width:40px;
+	padding:30px 10px 0 60px;
+}
+ul.checkout_list2 li.active2 .list_body form.right_cont .gray_gou .price_old_pre_ding{
+	float:left;
+	font:16px Arial,"microsoft yahei",sans-serif;
+	color:#fff;
+	margin:5px 0px 0 30px;
+	padding:10px 0 0 0;
+	border-right:dotted 1px #e0e0e0;
+}
+/**个人中心 取消预订订单提示框中的取消按钮样式*/
+.btn_baoqian_pre{ 
+	color:#fff; 
+	font:16px/35px  Arial,"microsoft yahei",sans-serif;
+	width:135px; 
+	height:35px;
+	margin:0px 0px 30px 110px;
+	display:inline-block;
+    text-align:center;
+	background:#388b57; border: none; cursor:pointer;
+}
+.btn_baoqian_pre:hover{background: #9cc5ab;}
+
+/**以下是预定列表样式 ............结束**/
+/**优惠价*/
+.product_page .entry_content .ava_price .price span.price_new{
+	color: black;
+	font: 28px Arial,"microsoft yahei",sans-serif;
+}
+/**时间*/
+.product_page .entry_content .block_attr .pre_time{
+	/* margin-top:30px; */
+	heith:82px;
+}
+#pre_time ul{
+	margin: 0 0 20px;
+    padding: 0 0 0 0px;
+}
+
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul li{
+	position:relative;
+	float:left;
+	list-style:none;
+	line-height:30px;
+	text-align:center;
+	width:231px;
+	height:77px;
+	background-color: #fffdf4;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #ffe6cb;
+}
+
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul li.one{
+	border-right: none;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul li.center{
+	background: url("../img/base_dividing_line.png") no-repeat;
+	border: none;
+	width:2px;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul li.two{
+	border-left-style:none;
+}
+
+
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.time_item li{
+	border:none;
+	width:70px;
+	height:47px;
+	line-height: 15px;
+	padding-left:40px;
+	padding-right: 0px;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.time_item li span{
+	display:inline-block;
+	width:21px;
+	height:15px;
+	background-color: #73b416;
+	color: white;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.time_item li.right{
+	background:none;	
+	padding-left: 0px;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.time_item li.center{
+	background:none;	
+	width:14px;
+	padding-left: 0px;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.time_item li.center img{
+	margin-top:2px;
+	width:14px;
+}
+.product_page .entry_content .block_attr .pre_time ul.pre_time_ul ul.color_span li span{
+	background-color: #c9033b;
+}
+.pre_time_after{
+	margin-top:115px;
+}
+
+#pre_price {
+	color: #444;
+}
+#pre_price span.price_old{
+	text-decoration: line-through;
+	padding-left: 0px;
+	padding-top: 0px;
+	color: #666666
+}
+
+/**setp*/
+.product_page .entry_content .block_attr div.time_count{
+	height:26px;
+	background-color: #fffdf4;
+	text-align: center;
+	border: 1px dashed #ffe6cb;
+	font-size: 19px;
+	padding-top: 4px;
+}
+.product_page .entry_content .block_attr div.time_count span.time_count_span{
+}
+.product_page .entry_content .block_attr div.time_count span.time_count_span span.time_red{
+	color:#e71f19;
+}
+.product_page .entry_content .block_attr div.rule{
+	height:20px;
+	background-color: #73b416;
+	text-align: left;
+	color: white;
+}
+.product_page .entry_content .block_attr div.rule a.rule{
+	text-decoration: none;
+	float: right;
+	margin-right: 4px;
+	color:white;
+}
+.product_page .entry_content .block_attr div.rule a.rule :HOVER :ACTIVE :FOCUS :LINK :VISITED{
+	text-color: #fff;
+}
+#block_attr_preTypeDetail{
+}
+#preTypeDetail{
+	/* margin-left: 3px; */
+}
+#preTypeDetail div.sku{
+	width:130px;
+	height:86px;
+	background-color: #eceef0;
+}
+#preTypeDetail div.sku ul.inner_ul{
+	text-align: center;
+	height:86px;
+}
+#preTypeDetail div.sku ul.inner_ul li{
+	border:none;
+	height: 24px;
+	line-height: 26px;
+	float: none;
+}
+#preTypeDetail div.sku ul.inner_ul li span.line{
+	height: 2px;
+	background-color: #aeaeaf;
+	width:50px;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+#preTypeDetail div.sku ul.inner_ul li span.line_green{
+	height: 2px;
+	background-color: #a5cf2d;
+	width:50px;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+.choose{
+	background-color: #fff;
+}
+.new{
+}
+.old{
+}
+#preTypeDetail ul{
+	list-style: none;
+	margin: 0 0 0 0px;
+    padding: 0 0 0 0px;
+}
+#preTypeDetail ul li{
+	float: left;
+	height: 86px;
+	border-left: 1px dashed #959595;
+	border-bottom: 1px dashed #959595;
+	
+	width:auto;
+}
+#li_last{
+	border-right: 1px dashed #959595;
+}
+
+
+.rule_pos{
+	margin-top:100px;
+}
+.img_circle{
+	background: url("../img/product_page_Green_Circle_hui.png") no-repeat;
+	width: 26px;
+	height:26px;
+	display: inline-block;
+	color: white;
+}
+.img_circle_choose{
+	background: url("../img/product_page_Green_Circle.png") no-repeat;
+	width: 26px;
+	height:26px;
+	display: inline-block;
+	color: white;
+}
+.img_circle_new{
+	background: url("../img/product_page_Green_Circle_hui.png") no-repeat;
+	width: 26px;
+	height:26px;
+	display: inline-block;
+	color: #000;
+}
+

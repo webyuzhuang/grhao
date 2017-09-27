@@ -1,0 +1,139 @@
+/*详情评论*/
+.appraise-box {
+	width: 100%;
+	float: left
+}
+
+.appraise-title {
+	
+}
+
+.appraise-title h3 {
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.appraise-title h3 .red {
+	font-size: 14px;
+	color: #F30
+}
+
+.appraise-all {
+	width: 850px;
+	border: 1px solid #f5e7ea;
+	float: left;
+	padding: 25px 0px;
+}
+
+.appraise-allone {
+	width: 110px;
+	text-align: center;
+	padding-left: 15px;
+	float: left;
+	padding-right: 50px;
+}
+
+.appraise-allone .star-icon {
+	width: 16px;
+	height: 16px;
+	background: url(../img/star_fen.png) no-repeat 1px -3px;
+	display: block;
+	float: left;
+	padding: 0px 3px;
+}
+
+.appraise-allone .star-icon-gray {
+	width: 16px;
+	height: 16px;
+	background: url(../img/star_fen.png) no-repeat -22px -3px;
+	display: block;
+	float: left;
+	padding: 0px 3px;
+}
+
+.appraise-allone li {
+	clear: both;
+	float: none
+}
+
+.appraise-allone .star01 {
+	font-size: 12px;
+	color: #9f1432;
+	line-height: 16px;
+	padding-top: 8px;
+}
+
+.appraise-allone .star02 {
+	font-size: 32px;
+	color: #9f1432;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	font-weight: bold
+}
+
+.appraise-alltwo {
+	width: 230px;
+	float: left;
+	padding-top: 8px;
+	line-height: 30px;
+	line-height: 22px;
+	padding-right: 30px;
+}
+
+.appraise-alltwo .like01 {
+	
+}
+
+.appraise-alltwo span {
+	float: left;
+	display: block;
+	margin-right: 5px;
+	display: inline;
+	vertical-align: middle;
+}
+
+.appraise-alltwo .like-line-gray {
+	width: 135px;
+	height: 14px;
+	background: #f0f0f0;
+	margin-top: 5px;
+}
+
+.appraise-alltwo .like-line-gray div {
+	width: 0px;
+	height: 14px;
+	background: #9f1432;
+}
+
+.appraise-alltwo .like01 {
+	width: 80px;
+}
+
+.appraise-alltwo li b {
+	color: #888;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal
+}
+
+.appraise-allthree {
+	float: left;
+	width: 210px;
+	border-left: 1px solid #e0e0e0;
+	padding-left: 80px;
+	line-height: 16px;
+}
+
+.appraise-allthree .icon-pj {
+	padding-left: 10px;
+	background: url(../img/icon_pj.jpg) no-repeat 1px -4px;
+	margin-top: 5px;
+}
+
+.appraise-allfour {
+	width: 220px;
+	float: left
+}
+
+.appraise-allfour .gray {
+	padding-top: 10px;
+}

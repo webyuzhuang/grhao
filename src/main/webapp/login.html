@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.wago.com/cuser/initLogin.htm -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>用户登陆_哇!购</title>
+<script type="text/javascript" src="js/jquery-validate/jquery-1.4.1.js"></script>
+<link rel="/shortcut icon" href="http://www.wago.com/cuser/favicon.ico">
+<link href="css/bothends.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/style-new.css" media="screen" rel="stylesheet" type="text/css">
+<link href="css/login.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div style="width:1190px; height:108px; margin:0 auto; background: url(img/logins-1.jpg) no-repeat;">
+		<a href="www.wago.com" style="width:140px; height:108px; float:left;"></a>
+	</div>
+	<div class="clear"></div>
+	<div class="login-mian-xb" style="background: url(img/logins-bg.jpg);">
+		<div class="login-boxtxt">
+			<!-- .login-bgbox -->
+			<div class="login-left matop" style="background: #fff;">
+				<div class="login-40">
+					<a class="login-dl" id="nomal_login">普通登陆</a>
+				</div>
+				<!-- *******表格******** -->
+				<form action="/login" method="post" id="for">
+				<div id="login-box1" style="display: block;">
+					<div class="login-kuang" id="login_input">
+						<ul>
+							<li class="text">账户名</li>
+							<li>
+								<div class="login-left-input">
+									<input type="text" class="input-one" id="uname" name="name" placeholder="用户名">
+									<div class="one-icon"></div>
+								</div></li>
+							<li id="account_input" class="color9e1634"></li>
+							<li class="text">密 码 <span class="help02"> <a href="http://www.wago.com/cuser/forgetPWD.htm" target="_black">忘记密码?</a> </span>
+							</li>
+							<li>
+								<div class="login-left-input">
+									<input type="password" class="input-one" id="password" name="pass" placeholder="请输入密码">
+									<div class="two-icon"></div>
+								</div></li>
+							<li id="password_input" class="color9e1634"></li>
+							<li class="text">验证码</li>
+							<li>
+								<div class="login-left-input" style="float:left;">
+									<input style="width:140px;" type="text" class="input-one" name="code" id="code" placeholder="请输入右侧验证码">
+									<img id="codeImage"  name="codeImage" src="yzm.jsp" class="authcode" width="100" style="cursor:pointer" onclick="this.src='yzm.jsp?'+new Date()">
+									<span id="msg"></span>
+								</div>
+							</li>
+							<li id="code_input" class="color9e1634"></li>
+						</ul>
+					</div>
+					<div class="login-help">
+						<p><input id="rememberName" name="kk" type="checkbox" checked="checked" style="vertical-align: middle;"> 记住用户名</p>
+						<br>
+						<p>
+							其他账号登录：
+							<a href="http://www.wago.com/cuser/qqLogin.htm"><img alt="" style="width:24px;height:24px;" title="QQ登录" src="img/qq_login_2.png"></a>
+ 							<a href="http://www.wago.com/cuser/wbLogin.htm"><img alt="" style="width:24px;height:24px;" title="新浪微博登录" src="img/wb_login_2.png"></a>
+						</p>
+						<p class="help01"><input type="image" src="img/denglu.jpg"  id="deng"></p>
+						<p style="text-align:right;">还不是哇!购用户？<a href="register.html">立即注册</a></p>
+					</div>
+				</div>
+				</form>
+
+				<script>
+					bian1=false;
+					$(function () {
+					    //判断验证码的ajax
+						$('#code').keyup(function () {
+							var i=$('#code').val();
+							$.ajax({
+								url:'/yanzm',
+                                type : 'post',
+								cache:false,
+								data:{code:i},
+								dataType:'text',
+								success:function (d) {
+									$('#msg').html(d);
+								    if(d.indexOf('正确')!=-1){
+                                        $('#msg').css("color","green");
+                                        bian1=true;
+									}else{
+                                        $('#msg').css("color","red");
+									}
+                                }
+							});
+                        });
+
+						$('#deng').click(function () {
+							if($('#rememberName').attr('checked')==true){
+								if(!bian1){
+								    alert("验证码有误");
+								}
+							}else{
+                                alert("请查看协议后选中哦");
+                                //$("#for").attr("action", "#");
+                                //layer.msg('请查看协议后选中哦',{icon:6,time:8000},$("#registerFrom").attr("action", "#"));
+                            }
+                        })
+                    })
+				</script>
+<!--<script>-->
+<!--$(function(){-->
+	<!--$("#code").keyup(function(){-->
+		<!--//var code=$("#code").val();-->
+		<!--$.ajax({-->
+			<!--url:"../registerServlet",-->
+			<!--data : {code:$("#code").val()}, //传输的数据-->
+			<!--type : "POST", // 用POST方式传输 -->
+			<!--dataType : "text", // 数据格式-->
+			<!--success : function(data) {-->
+				  <!--//data = parseInt(data, 10);-->
+				  <!--if (data == "1") {-->
+				   <!--$("#msg").html("验证码正确");-->
+				  <!--} else if (data == "0"){-->
+				   <!--$("#msg").html("验证码有误");-->
+				  <!--}-->
+			<!--}-->
+		<!--});		-->
+	<!--});-->
+
+	<!--$('#sub').click(function(){-->
+		<!--//var code=$("#code").val();-->
+		<!--$.ajax({-->
+			<!--url:"../userlogin",-->
+			<!--data : {uname:$("#uname").val(),password:$("#password").val(),code:$("#code").val()}, //传输的数据-->
+			<!--type : "post", // 用POST方式传输 -->
+			<!--async: false,//于是问了度娘一把，才知道ajax请求在异步发送和接收的时候因为有时候连服务器都未返回数据就执行了请求成功的函数所以未能返回正确的值，导致无法给指定的变量赋正确的值。于是解决方法就是把异步请求改为同步请求，这个问题得以解决-->
+			<!--dataType : "text", // 数据格式-->
+			<!--success : function(data) {-->
+				  <!--if(data=="1") {-->
+				  	<!--location.href="index.jsp";-->
+				  <!--}else if(data=="0"){-->
+				   <!--alert("用户名或密码错误,请重新输入");-->
+				  <!--}-->
+			<!--}-->
+		<!--});		-->
+	<!--});-->
+	<!---->
+<!--});-->
+<!--</script>-->
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+<div class="bottom">
+    <div class="bottom2 clearfix">
+        <div class="bottom2-left">
+            <div>
+                <h3 class="nav-bt1"><b></b>新手指南</h3>
+                <ul>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/registration_beginnersguide_wago.htm">账户注册</a></li>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/shopping_beginnersguide_wago.htm">购物流程</a></li>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/order_beginnersguide_wago.htm">订购方式</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="nav-bt2"><b></b>付款方式</h3>
+                <ul>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/payment_payment_wago.htm">支付方式</a></li>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/recharge_payment_wago.htm">充值说明</a></li>
+		          <li><a target="_blank" href="http://help.wago.com/opencms/coupon_payment_wago.htm">优惠券说明</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="nav-bt3"><b></b>配送方式</h3>
+                <ul>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/freight_distribution_wago.htm">配送运费</a></li>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/range_distribution_wago.htm">配送范围</a></li>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/time_distribution_wago.htm">配送时间</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="nav-bt4"><b></b>售后服务</h3>
+                <ul>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/refund_service_wago.htm">退款说明</a></li>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/policy_service_wago.htm">退换货政策</a></li>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/process_service_wago.htm">退换货流程</a></li>
+		            <li><a target="_blank" href="http://help.wago.com/opencms/problem_service_wago.htm">常见问题</a></li>
+                </ul>
+            </div>
+            <div style="width: 125px;">
+                <h3 class="nav-bt5"><b></b>关于我们</h3>
+                <ul>
+	            <li><a target="_blank" href="http://help.wago.com/opencms/company_about_wago.htm">公司介绍</a></li>
+	            <li><a target="_blank" href="http://help.wago.com/opencms/contact_about_wago.htm">联系我们</a></li>
+	            <li><a target="_blank" href="http://help.wago.com/opencms/cooperation_about_wago.htm">业务合作</a></li>
+	            <li><a target="_blank" href="http://help.wago.com/opencms/links_about_wago.htm">友情链接</a></li>
+                </ul>
+            </div>
+            <p class="p1"></p>
+        </div>
+        <div class="bottom2-right">
+            <ul>
+                <li class="li1"><img src="img/f-weixin.png"><img src="img/f-sina.png"></li>
+                <!--<li class="weibo-follow">-->
+                	<!--<wb:follow-button uid="5109209427" type="red_3" width="100%" height="24"></wb:follow-button>-->
+            	<!--</li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任</p>
+        <p><a target="_blank" href="http://www.miitbeian.gov.cn/">浙ICP备13029432号</a> | Copyright©2013-2017 <a target="_blank" href="http://zs-info.cn/">杭州掌烁信息科技有限公司</a>    版权所有</p>
+        <div style="width:300px;margin:0 auto; padding:0px 0;">
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010802006092" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="img/gab.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px0px 5px; color:#939393;">浙公网安备 33010802006092号</p></a>
+			</div>
+        <div class="">
+            <a href="http://www.pingpinganan.gov.cn/?spm=1.7274553.1997523009.27.NutHRK" target="_blank"><img src="img/bs1.png"></a>
+            <a href="http://122.224.75.236/wzba/login.do?method=hdurl&amp;doamin=http://www.wago.com&amp;id=330108000126231&amp;SHID=1223.0AFF_NAME=com.rouger.InfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail" target="_blank"><img src="img/bs2.png"></a>
+            <a href="http://si.trustutn.org/info?sn=544141009008289191648" target="_blank"><img src="img/bs3.png"></a>
+            <a><img src="img/bs4.png"></a>
+        </div>
+        <!-- 百度统计-->
+        <span style="display: none;"><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=f5092821594d011bd893686813c69adf" target="_blank"><img border="0" src="img/21.gif" width="20" height="20"></a></span>
+    </div>
+</div>
+
+
+</body>
+</html>
