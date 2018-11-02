@@ -17,7 +17,7 @@
     <!-- 配置自动扫描的包 -->
     <context:component-scan base-package="com.fz.controller" />
 
-
+<!-- 最开始的一些简单配置 ->
 
     <!-- 访问静态资源 -->
     <!--不知道我这个方法不能用，必须在web.xml中加三个servlet-mapping-->

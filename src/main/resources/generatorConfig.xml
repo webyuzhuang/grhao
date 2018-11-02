@@ -21,7 +21,7 @@
         </jdbcConnection>
 
 
-        <!-- 生成model java文件的 -->
+        <!-- 生成model java文件的   -->
         <!--${basedir}/src/main/java  com.fengze.shop.model  -->
         <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
 
